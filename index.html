@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Rarities Incremental</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <p>Your rarity is <span id="rarity"></span> (1 / <span id="rng"></span>) (#<span id="num"></span>)</p>
+  
+  <button onclick="tab(0)">Main</button><button onclick="tab(1)" id="sacrificebtn">Sacrifice</button><button onclick="tab(2)" id="prestigebtn">Prestige</button>
+  
+  <div id="main">
+    <button onclick="click(player.rps)">Increase RNG</button><br><br>
+    <button onclick="buy1()"><p>Increase RPS<br>Cost: <span id="rpscost"></span></p></button>
+    <br>
+    <br>
+    <button onclick="sacrifice()">Sacrifice for <span id="spgain"></span> SP</button>
+    <button onclick="prestige()">Prestige for <span id="ppgain"></span> PP</button>
+  </div>
+  
+  <div id="sacrifice">
+    <p>You have <span id="sp"></span> SP.</p>
+    <button onclick="buy2()"><p>Increase Luck<br>Cost: <span id="luckcost"></span></p></button><br><button onclick="buy3()"><p>Increase SP multiplier<br>Cost: <span id="spmultcost"></span> SP<p></button>
+  </div>
+  
+  <div id="prestige">
+    <p>You have <span id="pp"></span> PP.</p>
+    <button onclick="buy4()"><p>Increase LPS<br>Cost: <span id="lpscost"></span></p></button>
+  </div>
+  
+  <script src="ExpantaNum.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
